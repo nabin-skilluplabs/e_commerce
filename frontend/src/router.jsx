@@ -6,6 +6,8 @@ import LogIn from "./pages/LogIn";
 import ResetPassword from "./pages/ResetPassword";
 import ChangePassword from "./pages/ChangePassword";
 import Dashboard from "./pages/Dashboard";
+import SignOut from "./pages/SignOut";
+import Profile from "./pages/Profile";
 
 
 const router = createBrowserRouter([
@@ -31,8 +33,16 @@ const router = createBrowserRouter([
     },
     {
         path: "/dashboard", 
-        element: <Dashboard />
-    }
+        element: <Dashboard />,
+        children: [{
+            path: "profile", 
+            element: <Profile />
+        }]
+    },
+    {
+        path: "/sign-out", 
+        element: <SignOut />
+    },
 ]);
 
 export default router;
