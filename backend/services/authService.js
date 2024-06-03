@@ -40,4 +40,6 @@ async function createToken(id) {
       return token
 }
 
+
+
 module.exports = { register, getOne, signIn, createToken }
